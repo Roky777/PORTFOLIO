@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Sail&display=swap');
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  overflow: hidden;
+}
+
+#enter {
+  display: none;
+}
+
+/* ================= INTRO ================= */
+
+.intro {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #0c0c0c, #1a1a1a);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Name */
+.name {
+  display: flex;
+  gap: 0.15em;
+  font-size: clamp(3.5rem, 9vw, 8rem);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: white;
+    text-shadow:
+    0 0 10px rgba(255,255,255,0.3)
+}
+
+.space {
+  width: 1.2rem;
+}
+
+/* Letter animation */
+.name span {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: letterIn 1.4s ease forwards;
+}
+
+.name span:nth-child(1) { animation-delay: 0s; }
+.name span:nth-child(2) { animation-delay: 0.15s; }
+.name span:nth-child(3) { animation-delay: 0.3s; }
+.name span:nth-child(4) { animation-delay: 0.45s; }
+.name span:nth-child(6) { animation-delay: 0.65s; }
+.name span:nth-child(7) { animation-delay: 0.8s; }
+.name span:nth-child(8) { animation-delay: 0.95s; }
+.name span:nth-child(9) { animation-delay: 1.1s; }
+
+@keyframes letterIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Click text */
+.click-text {
+  position: absolute;
+  bottom: 40px;
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  opacity: 0;
+  animation: fadeIn 0.4s ease forwards;
+  animation-delay: 1.6s;
+  font-family: "Sail", system-ui;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Wipe */
+.wipe {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: white; */
+  background: linear-gradient(
+  135deg,
+  #ff9f43 0%,
+  #ff7a18 50%,
+  #2ec4b6 100%
+);
+}
+
+#enter:checked ~ .intro .wipe {
+  animation: wipeUp 0.8s ease forwards;
+}
+
+@keyframes wipeUp {
+  to { bottom: 0; }
+}
+
+/* Exit intro */
+#enter:checked ~ .intro {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+/* ================= MAIN PAGE ================= */
+
+.main-page {
+  position: fixed;
+  inset: 0;
+  background: black;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#enter:checked ~ .main-page {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hero{
+  width:100%;
+  height: 100vh;
+  /* background-color: blue; */
+}
+
+header{
+  position:fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  color: rgba(255, 255, 255, 0.6);
+  justify-content: space-between;
+  padding: 0px 120px;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  background-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  z-index: 20;
+}
+
+nav{
+  display: flex;
+  width:60% ;
+  font-size: 20px;
+}
+
+.nav-items{
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: 400;
+}
+
+.btn{
+  display: flex;
+  width: 20%;
+  justify-content: flex-end;
+}
+.btn>button{
+  padding: 10px 20px;
+  border-radius: 3213px;
+  font-size: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.309);
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+}
+.logo{
+  font-size: 28px;
+  color: aliceblue;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+.nav-items :nth-child(1){
+  color: white;
+}
+
+.hero-video{
+  position: absolute;
+  width: 100%;
+  height: 105vh;
+  top: 0px;
+  left: 370px;
+  /* box-shadow: 10px 10px 12px green; */
+}
+
+
+.hero-content{
+  display: flex;
+  flex-direction: column;
+  padding: 0px 120px;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 70%;
+  height: 100vh;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  text-shadow:
+    0 0 8px  rgba(46,196,182,0.28),
+    0 0 18px rgba(255,122,24,0.28), 
+    0 0 36px rgba(128,90,213,0.18);  
+
+}
+
+.t1{
+  font-size: 44px;
+  font-weight: 400;
+}
+h1{
+  font-size: 65px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+h1 > span{
+  font-size: 80px;
+  font-family: "Sail", system-ui;
+  font-weight: 400;
+  margin-left: 10px;
+  
+
+}
+.t2{
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.706);
+  margin-bottom: 30px;
+}
+
+.hero-btn :nth-child(1){
+  padding: 10px 20px;
+  border-radius: 3213px;
+  font-size: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.309);
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+}
+
+.hero-btn :nth-child(2){
+  padding: 10px 20px;
+  border-radius: 3213px;
+  font-size: 20px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  background-color: black;
+  border: none;
+  color: white;
+}
+
+.socials>i{
+  font-size: 40px;
+  margin: 13px;
+}
+
+.socials>img{
+  height: 80px;
+}
+
+.socials{
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+
+
+.about{
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* background-color:rgb(15, 15, 16); */
+}
+
+.photo{
+  width: 50%;
+  height: 100vh;
+  /* background-color: rgb(21, 30, 1); */
+}
+
+.aboutheading{
+  height: 10%;
+  width: 100%;
+  /* background-color: red; */
+  padding: 20px 120px;
+  font-size: 34px;
+  color: rgba(255, 255, 255, 0.701);
+}
+.photo1{
+  display: flex;
+  height: 90%;
+  width: 100%;
+  /* background-color: #042623; */
+  justify-content: center;
+  align-items: center;
+}
+.overlap{
+  position: absolute;
+  width: 25%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(2px);
+  z-index: -4;
+}
+.photo1>img{
+  transform: rotate(8deg);
+  width: 450px;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 100vh;
+  color: white;
+  padding-right: 120px;
+}
+
+.text :nth-child(1){
+  font-size: 78px;
+  font-family:"Sail", system-ui ;
+  margin-bottom: 30px;
+}
+
+.text span{
+  font-size: 70px;
+  /* font-family: "Outfit", sans-serif; */
+
+
+}
+
+.tt1 , .tt2{
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
