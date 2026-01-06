@@ -1,92 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Roky Paul</title>
-    <link rel="stylesheet" href="./css/app.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body>
-    <!-- INTRO TOGGLE -->
-    <input type="checkbox" id="enter" />
 
-    <!-- INTRO -->
-    <label for="enter" class="intro">
-      <div class="name">
-        <span>R</span><span>O</span><span>K</span><span>Y</span>
-        <span class="space"></span>
-        <span>P</span><span>A</span><span>U</span><span>L</span>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <title>Roky Paul</title>
+  <link rel="stylesheet" href="./css/app.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-      <div class="click-text">click to enter</div>
-      <div class="wipe"></div>
-    </label>
+<body>
+  <input type="checkbox" id="enter" />
 
-    <!-- ================= HOMEPAGE ================= -->
-    <main class="main-page">
-      <!-- ================= NAVBAR ================= -->
+  <label for="enter" class="intro">
+    <div class="name">
+      <span>R</span><span>O</span><span>K</span><span>Y</span>
+      <span class="space"></span>
+      <span>P</span><span>A</span><span>U</span><span>L</span>
+    </div>
+
+    <div class="click-text">click to enter</div>
+    <div class="wipe"></div>
+  </label>
+
+  <main class="main-page">
     <header>
       <div class="logo">Roky.</div>
       <nav>
         <div class="nav-items">
-          <span>About</span>
-          <span>Skills</span>
-          <span>Projects</span>
-          <span>Education</span>
+          <span><a href="#about"> About</a></span>
+          <span><a href="#proj">Projects</a> </span>
+          <span><a href="#ab">Skills</a> </span>
+          <span><a href="#education">Education</a> </span>
         </div>
         <div class="btn">
-          <button>Contact</button>
+          <button><a href="#Contact">Contact</a> </button>
         </div>
       </nav>
 
     </header>
 
-      ================= HERO (VIDEO BACKGROUND) =================
-      <section class="hero">
-        <video autoplay muted loop playsinline class="hero-video">
-          <source src="./images/Video2.mp4" type="video/mp4" />
-        </video>
+    <section class="hero">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="./images/Video2.mp4" type="video/mp4" />
+      </video>
 
-        <div class="hero-content">
-          <div class="hero-text">
-          <p class="t1">Design & Develop UI/UX</p>
-          <h1>With<Span>Roky Paul</Span></h1>
-          <p class="t2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do   sctetur eiu <br> smod tempor incididunt ut labore et dolore magna aliqua. </p>
-          </div>
-          <div class="hero-btn">
-            <button>Let's Work</button>
-            <button>explore.</button>
-          </div>
-          <div class="socials">
-            <i class="fa-brands fa-github"></i>
-            <img src="./images/Line 1.svg" alt="">
-            <i class="fa-brands fa-square-twitter"></i>
-            <img src="./images/Line 1.svg" alt="">
-            <i class="fa-brands fa-square-instagram"></i>
-            <img src="./images/Line 1.svg" alt="">
-            <i class="fa-brands fa-linkedin"></i>
-          </div>
-      </section>
-      <section class="about">
-        <div class="photo">
-          <div class="aboutheading">About Me: </div>
-          <div class="photo1">
-            <img src="./images/image 120.svg" alt="">
-          </div>
-          <div class="overlap"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="t1 ">Design & Develop UI/UX</p>
+          <h1>with<Span>Roky Paul</Span></h1>
+          <p class="t2 ">I design and develop intuitive, visually engaging digital experiences where <br> aesthetics meet
+            functionality.
+            Focused on clean interfaces, smooth <br> interactions, and thoughtful user journeys.</p>
         </div>
-        <div class="text">
-          <p>Design is <br> <span>not just my job.</span> </p>
-          <p class="tt1">I focus on understanding users before designing interfaces.
-My goal is always clarity — making products easy to use, intuitive to navigate, and meaningful to interact with.</p>
-            <p class="tt2">I work at the intersection of UI/UX design and web development, ensuring that what I design can be built efficiently, perform well, and scale cleanly across devices.</p>
-          <!-- <div class="btn">
-          <button>View Projects</button>
-          <Button><i class="fa-solid fa-arrow-right"></i></Button>
-        </div> -->
+        <div class="hero-btn">
+          <button><a href="#Contact">Let's Work</a> </button>
+          <button>explore.</button>
+        </div>
+        <div class="socials">
+
+          <i class="fa-brands fa-github"></i>
+          <img src="./images/Line 1.svg" alt="">
+          <i class="fa-brands fa-square-twitter"></i>
+          <img src="./images/Line 1.svg" alt="">
+          <i class="fa-brands fa-square-instagram"></i>
+          <img src="./images/Line 1.svg" alt="">
+          <i class="fa-brands fa-linkedin"></i>
+        </div>
+    </section>
+    <section class="about" id="about">
+      <div class="photo">
+        <div class="aboutheading"> <span>My </span> approach</div>
+        <div class="photo1">
+          <img src="./images/image 120.svg" alt="" class="autoRotate">
+        </div>
+        <div class="overlap"></div>
+      </div>
+      <div class="text">
+        <p class="autoShow">Design is <br> <span>not just my job.</span> </p>
+        <p class="tt1 autoblur">I focus on understanding users before designing interfaces.
+          My goal is always clarity — making products easy to use, intuitive to navigate, and meaningful to interact
+          with.</p>
+        <p class="tt2 autoblur">I work at the intersection of UI/UX design and web development, ensuring that what I design can
+          be built efficiently, perform well, and scale cleanly across devices.</p>
+      </div>
+    </section>
+    <section class="projects" id="proj">
+      <h2 class="autoShow" > <span>Designs & </span> <br>&nbsp; Things I’ve Built</h2>
+      <div id="cards-container">
+
+        <div class="box" id="ab">
+          <img src="./images/aura.png" alt="img1">
+          <div class="box-bottom">
+            <h5> <b>Aura.</b>
+              <br>AI Image Generator
+            </h5>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img src="./images/Mod.05.png" alt="">
+          <div class="box-bottom">
+            <h5> <b>Mod.05.</b>
+              <br>
+              fashion photos from all over world
+            </h5>
+            <i class="fa-regular fa-heart"></i>
+          </div>
         </div>
 
-      </section>
-    </main>
-  </body>
+        <div class="box">
+          <img src="./images/Dribble.png" alt="">
+          <div class="box-bottom">
+            <h5> <b>Aurora</b>
+              <br>
+              platform for creative professionals
+            </h5>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="./images/Portfolio.png" alt="">
+          <div class="box-bottom">
+            <h5><b>Portfolio</b>
+              <br>Portfolio website
+            </h5>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="./images/socialShop.png" alt="img1">
+          <div class="box-bottom">
+            <h5><b>Social Shop</b>
+              <br>A ecommerce mobile app Design
+            </h5>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img
+            src="https://cdn.dribbble.com/userupload/45946494/file/08639929009e86196f0338f72f8dd2d1.png?format=webp&resize=640x480&vertical=center"
+            alt="">
+          <div class="box-bottom">
+            <h5>Elegant Organic Pro...</h5>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="education-section" id="education">
+
+  <div class="education-head">
+    <h1 class="handwritten-title autoShow">art is not real</h1>
+    <p class="education-intro autoShow">
+      Education shaped how I think, observe, and build. Each phase added clarity,
+      discipline, and perspective to my creative journey.
+    </p>
+  </div>
+
+  <div class="education-layout">
+
+    <div class="education-card">
+      <p class="autoblur">
+        I completed my high schooling from <strong>Nebadhai High School</strong>,
+        where I built a strong academic foundation and developed curiosity for
+        problem-solving and creativity.
+        <br><br>
+        I am currently pursuing <strong>B.Tech</strong> from
+        <strong>Medhavi Skills University</strong>, focusing on practical learning
+        and industry-aligned skills.
+        <br><br>
+        Alongside my degree, I am sharpening my design and development expertise
+        through <strong>Career Excellence at PW IOI</strong>, where I learn real-world
+        UI/UX thinking, modern web development, and professional workflows.
+      </p>
+
+      <span class="signature">Roky Paul</span>
+    </div>
+
+    <div class="education-image">
+      <img src="./images/image5.svg" alt="" class="autoRotate">
+    </div>
+
+  </div>
+
+</section>
+
+
+    <section class="skills" id="skill" id="education">
+      <div class="list">
+        <div class="item" style="--position: 1"><img src="./images/skill1.png" alt=""></div>
+        <div class="item" style="--position: 2"><img src="./images/skill4.png" alt=""></div>
+        <div class="item" style="--position: 3"><img src="./images/skill2.png" alt=""></div>
+        <div class="item" style="--position: 4"><img src="./images/skill5.png" alt=""></div>
+        <div class="item" style="--position: 5"><img src="./images/skill3.png" alt=""></div>
+        <div class="item" style="--position: 6"><img src="./images/skill6.png" alt=""></div>
+      </div>
+    </section>
+
+    <section class="end" id="Contact" class="">
+
+      <div class="cta">
+        <h2 class="line-1 autoShow" >art is soul</h2>
+        <h2 class="line-2" >of the earth and life</h2>
+
+        <p class="autoblur">
+          I design and build digital experiences that balance aesthetics
+          with usability — where every detail serves a purpose
+          and every interaction feels natural.
+        </p>
+
+        <button class="cta-btn">Let's Work</button>
+      </div>
+
+      <div class="footer-strip">
+        <div class="brand">Roky.</div>
+
+        <div class="footer-icons">
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+      </div>
+
+      <div class="end-text">
+        where art is not ordinary art.
+      </div>
+
+    </section>
+
+
+  </main>
+</body>
+
 </html>
